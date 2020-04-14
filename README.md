@@ -11,7 +11,9 @@ It enables the following symmetric interaction models via async message passing 
 ## Description
 
 ## Demo
-### Dependency
+### 1. Prepare Project
+#### Dependency
+
 - RSocket
 ```
 dependencies {
@@ -19,7 +21,8 @@ dependencies {
 }
 ```
 
-### RSocket Client CLI
+#### RSocket Client CLI
+
 ```
 $ curl -L https://github.com/making/rsc/releases/download/0.4.2/rsc-0.4.2.jar -o rsc.jar
 ```
@@ -71,6 +74,21 @@ Option                              Description
 -w, --wiretap                       Enable wiretap
 </code>
 </pre>
+</details>
+
+### 2. Spring RSocket Project
+#### Lazy Initialization
+By default in Spring, all the defined beans, and their dependencies, are created when the application context is created.
+
+By contrast, when we configure a bean with lazy initialization, the bean will only be created, and its dependencies injected, once they're needed.
+
+<details>
+<summary><code>lazy-initialization: true</code></summary>
+<pre><code>
+spring:
+  main:
+    lazy-initialization: true
+</code></pre>
 </details>
 
 ## Features
