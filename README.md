@@ -25,8 +25,9 @@ $ curl -L https://github.com/making/rsc/releases/download/0.4.2/rsc-0.4.2.jar -o
 ```
 
 <details>
-<summary>`$ java -jar rsc.jar --help`</summary>
-```
+<summary><code>$ java -jar rsc.jar --help</code></summary>
+<pre>
+<code>
 $ java -jar rsc.jar --help
 
 usage: rsc Uri [Options]
@@ -68,7 +69,8 @@ Option                              Description
 --take [Integer]                    Enable take(n)
 -v, --version                       Print version
 -w, --wiretap                       Enable wiretap
-```
+</code>
+</pre>
 </details>
 
 ## Features
