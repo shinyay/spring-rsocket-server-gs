@@ -24,6 +24,8 @@ dependencies {
 $ curl -L https://github.com/making/rsc/releases/download/0.4.2/rsc-0.4.2.jar -o rsc.jar
 ```
 
+<details>
+<summary>`$ java -jar rsc.jar --help`</summary>
 ```
 $ java -jar rsc.jar --help
 
@@ -67,6 +69,7 @@ Option                              Description
 -v, --version                       Print version
 -w, --wiretap                       Enable wiretap
 ```
+</details>
 
 ## Features
 
