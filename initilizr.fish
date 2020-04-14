@@ -4,9 +4,9 @@
 set -g GROUP_ID com.google.shinyay
 set -g ARTIFACT_ID spring-boot-demo
 set -g NAME $ARTIFACT_ID
-set -g DESCRIPTION "Sample project for Spring Boot"
+set -g DESCRIPTION "Sample project for Spring RSocket Server"
 set -g PACKAGE $GROUP_ID
-set -g DEPENDENCY web,actuator,thymeleaf
+set -g DEPENDENCY actuator,rsocket
 
 curl https://start.spring.io/starter.zip --create-dirs -o ./spring/spring.zip \
         -d bootVersion=2.2.6 \
