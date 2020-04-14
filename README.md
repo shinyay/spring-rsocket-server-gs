@@ -11,6 +11,13 @@ It enables the following symmetric interaction models via async message passing 
 ## Description
 
 ## Demo
+### Dependency
+- RSocket
+```
+dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-rsocket")
+}
+```
 
 ## Features
 
