@@ -91,6 +91,21 @@ spring:
 </code></pre>
 </details>
 
+#### Controller
+```kotlin
+@Controller
+class RSocketController {
+    val server = "Server"
+    val response = "Response"
+    
+    @MessageMapping("request-response")
+    fun requestResponse(request: Message): Message {
+        logger.info("Received request-response request: $request")
+        return Message(server, response)
+    }
+}
+```
+
 ## Features
 
 - feature:1
