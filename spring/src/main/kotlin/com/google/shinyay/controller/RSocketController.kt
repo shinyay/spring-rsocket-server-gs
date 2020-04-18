@@ -15,6 +15,6 @@ class RSocketController {
     @MessageMapping("request-response")
     fun requestResponse(request: Message): Message {
         logger.info("Received request-response request: $request")
-        return Message(server, response)
+        return Message(server, response, 0)
     }
 }
