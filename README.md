@@ -106,6 +106,16 @@ class RSocketController {
 }
 ```
 
+#### Send a message to Sercer with RSocket Client CLI
+```
+$ java -jar rsc.jar \
+  --debug --request \
+  --data "{\"origin\":\"Client\",\"interaction\":\"Request\"}" \
+  --route request-response \
+  tcp://localhost:7000
+```
+
+
 ## Features
 
 - feature:1
