@@ -2,8 +2,6 @@ package com.google.shinyay.controller
 
 import com.google.shinyay.logger
 import com.google.shinyay.model.Message
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
 import org.springframework.messaging.handler.annotation.MessageMapping
 import org.springframework.stereotype.Controller
 
