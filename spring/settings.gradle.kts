@@ -1,1 +1,1 @@
-rootProject.name = "spring-rsocket-server"
+rootProject.name = "spring-rsocket-server-gs"
