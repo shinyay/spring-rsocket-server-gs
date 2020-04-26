@@ -17,4 +17,9 @@ class RSocketController {
         logger.info("Received request-response request: $request")
         return Message(server, response)
     }
+
+    @MessageMapping("fire-and-forget")
+    fun findAndForget(request: Message): Unit {
+        logger.info("Received fire-and-request: $request")
+    }
 }
