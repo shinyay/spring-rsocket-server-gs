@@ -147,6 +147,13 @@ Data:
 {"origin":"Server","interaction":"Response","index":0,"created":1587219913}
 ```
 
+### 3. Fire and Forget
+In this case, function should return `Unit` type
+```
+@MessageMapping("fire-and-forget")
+fun findAndForget(request: Message): Unit
+```
+
 ## Features
 
 - feature:1
