@@ -161,7 +161,7 @@ In this case, function should return `Flux` type
 fun findAndForget(request: Message): Unit
 ```
 
-
+Flux is a “Publisher” of data. It describes streams of 0 to N elements and offers a great many operators for processing streaming data.
 
 ## Features
 
