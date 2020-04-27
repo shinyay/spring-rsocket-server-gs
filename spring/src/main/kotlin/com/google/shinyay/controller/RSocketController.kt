@@ -4,6 +4,8 @@ import com.google.shinyay.logger
 import com.google.shinyay.model.Message
 import org.springframework.messaging.handler.annotation.MessageMapping
 import org.springframework.stereotype.Controller
+import reactor.core.publisher.Flux
+import java.time.Duration
 
 @Controller
 class RSocketController {
@@ -21,5 +23,12 @@ class RSocketController {
     @MessageMapping("fire-and-forget")
     fun findAndForget(request: Message): Unit {
         logger.info("Received fire-and-request: $request")
+    }
+
+    @MessageMapping("stream")
+    fun stream(request: Message): Flux<Message> {
+        return Flux.interval(Duration.ofSeconds(1))
+                .map { index -> Message(server, stream, index) }
+                .log()
     }
 }
