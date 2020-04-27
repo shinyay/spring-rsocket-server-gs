@@ -154,6 +154,15 @@ In this case, function should return `Unit` type
 fun findAndForget(request: Message): Unit
 ```
 
+### 3. Stream
+In this case, function should return `Flux` type
+```
+@MessageMapping("fire-and-forget")
+fun findAndForget(request: Message): Unit
+```
+
+
+
 ## Features
 
 - feature:1
