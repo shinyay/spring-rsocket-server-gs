@@ -28,7 +28,7 @@ class RSocketController {
     @MessageMapping("stream")
     fun stream(request: Message): Flux<Message> {
         logger.info("Received stream request: $request")
-        return Flux.interval(Duration.ofSeconds(1))
+        return Flux.interval(Duration.ofSeconds(2))
                 .map { index -> Message(server, stream, index) }
                 .log()
     }
