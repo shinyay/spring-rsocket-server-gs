@@ -157,8 +157,11 @@ fun findAndForget(request: Message): Unit
 ### 3. Stream
 In this case, function should return `Flux` type
 ```
-@MessageMapping("fire-and-forget")
-fun findAndForget(request: Message): Unit
+@MessageMapping("stream")
+fun stream(request: Message): Flux<Message> = Flux.interval(Duration.ofSeconds(2))
+                                              .map { index -> Message(server, stream, index) }
+                                              .log()
+}
 ```
 
 Flux is a “Publisher” of data. It describes streams of 0 to N elements and offers a great many operators for processing streaming data.
