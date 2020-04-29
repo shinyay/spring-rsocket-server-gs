@@ -166,6 +166,10 @@ fun stream(request: Message): Flux<Message> = Flux.interval(Duration.ofSeconds(2
 
 Flux is a “Publisher” of data. It describes streams of 0 to N elements and offers a great many operators for processing streaming data.
 
+### 4. Channel
+Channels are bi-directional pipes that allow streams of data to flow in both direction.
+With channels, a data stream from client-to-server can coexist alongside a data stream from server-to-client.
+
 ## Features
 
 - feature:1
