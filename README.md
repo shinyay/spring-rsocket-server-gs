@@ -182,7 +182,13 @@ fun channel(config: Flux<Duration>): Flux<Message> =
 
 #### `doOnNext`
 - Add behavior (side-effect) triggered when the Flux emits an item.
+
 ![doOnNext](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/doOnNextForFlux.svg)
+
+#### `switchMap`
+- Switch to a new Publisher generated via a Function whenever this Flux produces an item. As such, the elements from each generated Publisher are emitted in the resulting Flux.
+
+![switchMap](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/switchMap.svg)
 
 ## Features
 
