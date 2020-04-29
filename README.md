@@ -170,6 +170,16 @@ Flux is a “Publisher” of data. It describes streams of 0 to N elements and o
 Channels are bi-directional pipes that allow streams of data to flow in both direction.
 With channels, a data stream from client-to-server can coexist alongside a data stream from server-to-client.
 
+```
+@MessageMapping("channel")
+fun channel(config: Flux<Duration>): Flux<Message> =
+        config
+                .doOnNext { config -> logger.info("Frequency config is ${config.seconds} seconds.") }
+                .switchMap { config -> Flux.interval(config)
+                        .map{index -> Message(server, channel, index)}
+                        .log()}
+```
+
 ## Features
 
 - feature:1
