@@ -180,6 +180,10 @@ fun channel(config: Flux<Duration>): Flux<Message> =
                         .log()}
 ```
 
+#### `doOnNext`
+- Add behavior (side-effect) triggered when the Flux emits an item.
+![doOnNext](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/doOnNextForFlux.svg)
+
 ## Features
 
 - feature:1
