@@ -32,4 +32,12 @@ class RSocketController {
                 .map { index -> Message(server, stream, index) }
                 .log()
     }
+
+    @MessageMapping("channel")
+    fun channel(config: Flux<Duration>): Flux<Message> =
+            config
+                    .doOnNext { config -> logger.info("Frequency config is ${config.seconds} seconds.") }
+                    .switchMap { config -> Flux.interval(config)
+                            .map{index -> Message(server, channel, index)}
+                            .log()}
 }
