@@ -190,6 +190,15 @@ fun channel(config: Flux<Duration>): Flux<Message> =
 
 ![switchMap](https://projectreactor.io/docs/core/release/api/reactor/core/publisher/doc-files/marbles/switchMap.svg)
 
+### RSocket Interaction Model
+#### Request-Response
+when you send one request and receive one response, exactly like HTTP. Even here though, the protocol has advantages over HTTP in that it is asynchronous and multiplexed.
+#### Fire-and-Forget
+an optimization of request/response that is useful when a response is not needed, such as for non-critical event logging.
+#### Request-Stream
+analogous to Request/Response returning a collection, the collection is streamed back instead of querying until complete, so for example send a bank account number, respond with a real-time stream of account transactions.
+#### Channel
+a bi-directional stream of messages allowing for arbitrary interaction models.
 ## Features
 
 - feature:1
