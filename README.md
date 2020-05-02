@@ -195,7 +195,7 @@ fun channel(config: Flux<Duration>): Flux<Message> =
 when you send one request and receive one response, exactly like HTTP. Even here though, the protocol has advantages over HTTP in that it is asynchronous and multiplexed.
 
 ```
-fun requestResponse(payload: Payload): Mono<Payload> = Mono.just(payload)
+fun requestResponse(payload: Payload): Mono<Payload>
 ```
 
 #### Fire-and-Forget
@@ -209,11 +209,16 @@ fun findAndForget(payload: Payload): Mono<Unit>
 analogous to Request/Response returning a collection, the collection is streamed back instead of querying until complete, so for example send a bank account number, respond with a real-time stream of account transactions.
 
 ```
-fun stream(payload: Payload): Flux<Payload> = Flux.from(dataPublisher)
+fun stream(payload: Payload): Flux<Payload>
 ```
 
 #### Channel
 a bi-directional stream of messages allowing for arbitrary interaction models.
+
+```
+fun channel(payload: Publisher<Payload>): Flux<Payload>
+```
+
 ## Features
 
 - feature:1
