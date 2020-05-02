@@ -193,6 +193,10 @@ fun channel(config: Flux<Duration>): Flux<Message> =
 ### RSocket Interaction Model
 #### Request-Response
 when you send one request and receive one response, exactly like HTTP. Even here though, the protocol has advantages over HTTP in that it is asynchronous and multiplexed.
+
+```
+fun requestResponse(payload: Payload): Mono<Payload> = Mono.just(payload)
+```
 #### Fire-and-Forget
 an optimization of request/response that is useful when a response is not needed, such as for non-critical event logging.
 #### Request-Stream
