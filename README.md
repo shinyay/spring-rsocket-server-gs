@@ -197,8 +197,14 @@ when you send one request and receive one response, exactly like HTTP. Even here
 ```
 fun requestResponse(payload: Payload): Mono<Payload> = Mono.just(payload)
 ```
+
 #### Fire-and-Forget
 an optimization of request/response that is useful when a response is not needed, such as for non-critical event logging.
+
+```
+fun findAndForget(payload: Payload): Mono<Unit>
+```
+
 #### Request-Stream
 analogous to Request/Response returning a collection, the collection is streamed back instead of querying until complete, so for example send a bank account number, respond with a real-time stream of account transactions.
 #### Channel
