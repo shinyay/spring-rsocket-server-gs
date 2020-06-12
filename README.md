@@ -10,6 +10,8 @@ It enables the following symmetric interaction models via async message passing 
 
 ## Description
 
+- [RSocket Client - shinyay/spring-rsocket-client-gs](https://github.com/shinyay/spring-rsocket-client-gs)
+
 ## Demo
 ### 1. Prepare Project
 #### Dependency
